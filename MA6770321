@@ -1,0 +1,4 @@
+install.packages("rvest")
+library(rvest)
+html = 'https://www.stat.cmu.edu/~larry/all-of-statistics/=data/nerve.dat'
+
