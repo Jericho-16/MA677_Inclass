@@ -1,4 +1,9 @@
 install.packages("rvest")
 library(rvest)
-html = 'https://www.stat.cmu.edu/~larry/all-of-statistics/=data/nerve.dat'
+url <- "https://www.stat.cmu.edu/~larry/all-of-statistics/data/nerve.dat"
+data <- read.table(url, header = TRUE)
+clean_data <- na.omit(data)
+data_list <- as.list(clean_data)
+data_list <- as.numeric(data_list)
+q = quantile(data_list, 0.4)-quantile(data_list, 0.6)
 
